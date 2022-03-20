@@ -59,8 +59,8 @@ function createNotificationPayload(snsMessage) {
             value: process.env.REGION,
           },
           {
-            name: "Application:",
-            value: process.env.APPLICATION,
+            name: "Environment:",
+            value: snsMessage["Environment"],
           },
           {
             name: "URL:",
