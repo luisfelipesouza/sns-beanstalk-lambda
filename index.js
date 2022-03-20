@@ -39,9 +39,9 @@ function createNotificationPayload(snsMessage) {
   let payload = {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
-    summary: "AWS Elastic Beanstalk Notification",
+    summary: `(Beanstalk) ${snsMessage["Environment"]}: ${snsMessage.Message}`,
     themeColor: "3498db",
-    title: `AWS Elastic Beanstalk Notification`,
+    title: `Elastic Beanstalk Notification`,
     sections: [
       {
         activityTitle: `${snsMessage.Message}`,
